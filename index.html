@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="./styles.css">
+
+        <title>Login</title>
+    </head>
+
+    <body>
+        <div class="login">
+            <h1>Login</h1>
+            <form action="./formulario.php" method="POST">
+                <input
+                    type="text"
+                    name="nome"
+                    placeholder="Usuário"
+                    required="required" 
+                    autofocus />
+                <input
+                    type="password"
+                    name="senha"
+                    placeholder="Senha"
+                    required="required" />
+
+                <button
+                    type="submit"
+                    class="btn">
+                    Enviar
+                </button>
+                <button
+                    type="reset"
+                    class="btn">
+                    Cancelar
+                </button>
+
+            </form>
+        </div>
+    </body>
+</html>
