@@ -12,18 +12,28 @@
 <body>
   <div class=post-php>
     <?php
-    $nome = $_POST['nome'];
-    $senha = $_POST['senha'];
+    if ($_POST['nome'] && $_POST['senha']) {
+      $nome = $_POST['nome'];
+      $senha = $_POST['senha'];
 
-    echo "User: $nome";
+      echo "User: $nome";
+      echo "<div class='boas-vindas'>";
+
+      echo "<h1>Bem vindo!</h1> <br>";
+      echo "<p>Seu código está funcionando</p>";
+
+      echo "</div>";
+    } else {
+      echo "<div class='boas-vindas'>";
+
+      echo "<h1>Você não preencheu a senha!</h1> <br>";
+      echo "<p>Mas seu código está funcionando</p> <br>";
+      echo "<input type='button' value='Voltar' class='btn' onClick='history.go(-1)'>";
+      echo "</div>";
+    }
     ?>
   </div>
-  <div class="boas-vindas">
 
-    <h1>Bem vindo!</h1> <br>
-    <p>Seu código está funcionando</p>
-
-  </div>
 </body>
 
 </html>
